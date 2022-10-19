@@ -186,7 +186,7 @@ body {
   background-color: lightpink;
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .services {
     grid-template-columns: 1fr;
   }
@@ -196,7 +196,31 @@ body {
 
 .projects {
   grid-area: projects;
-  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img {
+  height: 100%;
+  transition: 0.3s;
+}
+
+.projects a:hover img {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 /* FOOTER */
